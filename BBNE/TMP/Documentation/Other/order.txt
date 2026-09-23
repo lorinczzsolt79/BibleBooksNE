@@ -1,0 +1,109 @@
+﻿public enum Order
+    {
+        unknown,
+
+        document_part_id,           //  ID
+        document_title,             //  MAIN_TITLE  H1  Holy Bible(s)
+        document_subtitle,          //  SUBTITLE    H2
+        document_item,              //  ITEM
+
+        pre_part_id,                //  ID
+        pre_main_title,             //  MAIN_TITLE  H2  For Example: (in NIV bible) About Bible; general title before verses or anything else
+        pre_subtitle,               //  SUBTITLE    H3
+        pre_item,                   //  ITEM            common item before verses or anything else
+
+        main_part_id,               //  ID
+        main_title,                 //  MAIN_TITLE  H2
+        main_subtitle,              //  SUBTITLE    H3
+        main_item,                  //  ITEM
+
+        bible_group_id,             //  ID
+        bible_group_main_title,     //  MAIN_TITLE  H3  For Example: English Bibles
+        bible_group_subtitle,       //  SUBTITLE    H4
+        bible_group_item,           //  ITEM
+
+        bible_id,                   //  ID
+        bible_main_title,           //  MAIN_TITLE  H3  For Example: Bible in Basic English
+        bible_subtitle,             //  SUBTITLE    H4  
+        bible_item,                 //  ITEM
+
+        book_group_id,              //  ID            
+        book_group_main_title,      //  MAIN_TITLE  H4  For Example: All, Old, New (0,1,2); plus Other 3 ; 
+        book_group_subtitle,        //  SUNTITLE    H5  For Example: Book of Moses, ..., Letters of Apostols, Rev. (3, ..., n.)
+        book_group_item,            //  ITEM            For Example: Book name in Html anchor element
+
+        book_id,                    //  ID
+        book_main_title,            //  MAIN_TITLE  H4  For Example: Genesis, ..., Rev.
+        book_subtitle,              //  SUBTITLE    H5  For Example: Psalm parts (from I. to V.)
+        book_item,                  //  ITEM
+
+        chapter_id,                 //  ID            
+        chapter_main_title,         //  MAIN_TITLE  H5
+        chapter_subtitle,           //  SUBTITLE    H6
+        chapter_item,               //  ITEM            Chapter list
+
+        top_nav_id,                 //  ID
+        top_nav_main_title,         //  MAIN_TITLE  H5
+        top_nav_subtitle,           //  SUBTITLE    H6
+        top_nav_item,               //  ITEM            navbar before verses
+
+        verse_group_id,             //  ID              
+        verse_group_main_title,     //  MAIN_TITLE  H5      
+        verse_group_subtitle,       //  SUBTITLE    H6
+        verse_group_item,           //  ITEM            For Example: MATTHEW.40.6.9-13.
+
+        item_group_id,              //  ID              group id of a verse group: verses from more bible; same verses from different bibles
+        item_group_main_title,      //  MAIN_TITLE
+        item_group_subtitle,        //  SUBTITLE
+        item_group_item,            //  ITEM
+
+        headline_title,             //  SUBTITLE    H5  before a verse group; For Example: "The Lord's Prayer"
+        chapter_title,              //  PRE_ITEM        special verse item; usually the first Verses item where Verse id is 0; It is not a headline.
+        verse_item,                 //  ITEM            in the middle
+        crosslink_item,             //  POST_ITEM       after a verse
+
+        bottom_nav_id,                //  ID
+        bottom_nav_main_title,        //  MAIN_TITLE  H2
+        bottom_nav_subtitle,          //  SUBTITLE    H3
+        bottom_nav_item,              //  ITEM            navbar after verses
+        // End of page part
+
+        break_point,                //                  breakpoint in sorting
+
+        post_part_id,               //  ID
+        post_main_title,            //  MAIN_TITLE  H2  general title after verses title of footnotes, word_list, etc.; (in NIV bible) Life in New Testament Time
+        post_subtitle,              //  SUBTITLE    H3
+        post_item,                  //  ITEM            common item after verses
+
+        statistic_group_id,         //  ID            
+        statistic_group_main_title, //  MAIN_TITLE  H3  title of a book group
+        statistic_group_subtitle,   //  SUBTITLE    H4  title of a book group
+        statistic_group_item,       //  ITEM
+
+        statistic_id,               //  ID
+        statistic_main_title,       //  MAIN_TITLE  H4  title of a book group
+        statistic_subtitle,         //  SUBTITLE    H5  title of a book group
+        statistic_item,             //  ITEM
+
+        footnote_id,                //  ID
+        footnote_main_title,        //  MAIN_TITLE  H4  general title after verses title of footnotes, word_list, etc.; (in NIV bible) Life in New Testament Time
+        footnote_subtitle,          //  SUBTITLE    H5
+        footnote_item,              //  ITEM            after all verses
+
+        other_part_id,               //  ID
+        other_main_title,            //  MAIN_TITLE  H2  
+        other_subtitle,              //  SUBTITLE    H3  
+        other_item,                  //  ITEM            information; usually in the footer part in html
+
+        wordlist_id,                 //  ID
+        wordlist_main_title,         //  MAIN_TITLE    
+        wordlist_subtitle,           //  SUBTITLE       
+        wordlist_item,               //  ITEM           after footnotes;  dictionary
+
+        audio_id,                    //  ID
+        audio_main_title,            //  MAIN_TITLE    
+        audio_subtitle,              //  SUBTITLE       
+        audio_item,                  //  ITEM            it is just a link somewhere on the web page; (maybe after id or title)
+
+        none
+    } 

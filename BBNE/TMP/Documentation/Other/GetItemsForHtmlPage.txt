@@ -1,0 +1,104 @@
+
+# Scenario
+
+	1st STEP:	Get Id(s)
+
+		If Simple:	Get Bible, Book, Chapter, Verse Ids, make a FullId, and add a FullId BibleBookChapterVerse List
+
+		If Multi:	Same as Simple many times.
+
+		Note:		one method enough
+
+	2nd STEP:	Get Order Types:	make an Order Type list
+
+	3rd STEP:	Page Query method
+
+	4th	STEP:	Selection
+
+	5th STEP:	Return values
+
+				Obj: FullIdsWithText List
+
+## PageQuery	Selections for web pages
+
+	FullId BibleBookChapterVerse List
+	Order Type list
+
+## Selection
+
+	### Verses:	Get bible verses
+
+		Bible					Selected	Database selection		from all databases that list contains, one (selected) or more (selected), all (-1)
+			Table				Selected	SQL selection			from all tables that list contains, one (selected) or more (selected), all (-1)
+				Book			Selected	SQL selection			from all book that list contains, one (selected) or more (selected), all (-1)
+					Chapter		Selected	SQL selection			all chapters that list contains, one (selected) or more (selected), all (-1)
+						Verse	All			SQL selection			all verses that list contains, one (selected) or more (selected), all (-1)
+		Example:
+			- Whole:			(if ids:) Bible = -1; Book = -1; Chapter = -1; Verse = -1;	where -n means ALL Bibles, ALL Books, ALL Chapters, ALL Verses
+			- Full selection:	(if ids:) Bible =  1; Book =  1; Chapter =  1; Verse =  1;	where  1 means only one, only the selected
+
+	### BookInfos:	Get bible infos
+
+					one or more BookInfos
+
+	### AddOns:		Get values
+	
+					If Order Type List contains and always ALL!
+
+	### SQL Tables
+
+		Identifiers					Table		Note
+
+		Book, Chapter, Verse		Verses		If the Verse Identifier value is less then 0 means ALL verses from chapter.
+												Otherwise only the matched BibleRow.
+
+		Book						BookInfos	Where BookInfos Id equals with BibleRow.Book Id.
+
+		Plus!						If necessary. Always ALL!
+
+		Book, Chapter				Crosslinks	All Crosslinks for Chapter if Order Type List contains.
+		Book, Chapter				Footnotes	All Footnotes for Chapter if Order Type List contains.
+		Book, Chapter				Headlines	All Headlines for Chapter if Order Type List contains.
+		Book, Chapter				WordList	All WordList for Chapter if Order Type List contains.
+
+# Something changed
+
+	- one of the Ids changed		(Bible, Book, Chapter, Verse)
+
+
+	- AddOns changed				(Crosslinks, Footnotes, Headlines, WordList, Audio)
+
+		- If changed item was enabled		=> query and new page	(ids not changed)
+		- If changed item was not enabled	=> new page only		(ids not changed)
+
+	1. BBE
+	2. HUK
+	3. NIV
+
+	1. Genesis
+	2. next one
+	3. next one
+	...
+	n. last one
+
+# Pages
+
+	Reader pages
+	What				When													Action
+
+	WelcomePage			When the program starts and there is no user settings.	Show Welcome Page
+	No databases		
+	Single Bible Page	From UserAction setting									SetView and Show Singel Bible Page
+	Mutli Bible Page	From UserAction setting									SetView and Show Multi Bible Page
+	Select! page		When one of the Ids value less than 1					SetView	and Show Select! page
+
+	Other pages
+
+	Databases page		From menu												Show Databases page
+	Settings page		From menu												Show Settings page
+	Help pages			From menu												Show help page (Not generated.)
+
+
+
+
+

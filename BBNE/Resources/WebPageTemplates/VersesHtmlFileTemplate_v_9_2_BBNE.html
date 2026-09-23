@@ -1,0 +1,542 @@
+  </script>
+  <script>
+    const JS_VERSION_NAVIGATION = "v.004_2026-08-05";
+
+    const WEB_VIEV = window.chrome.webview;
+
+    function post_message(text) {
+      if (WEB_VIEV != null) {
+        WEB_VIEV.postMessage(text);
+      }
+      else {
+        console.log(text);
+      }
+    }
+
+    function postMsgReady() {
+      const isReayy = (WEB_VIEV == null) ? " NOT " : " ";
+      post_message('msg:Post message function' + isReayy + 'ready!');
+    }
+    postMsgReady();
+  </script>
+
+  <script>
+    const JS_VERSION_KEYPRESS = "v.003_2026-07-31";
+
+    document.addEventListener('keydown', (event) => {
+      switch (event.key) {
+        case 'ArrowUp':
+        case 'w':
+          selectVerse(false);
+          break
+        case 'ArrowDown':
+        case 's':
+          selectVerse(true);
+          break
+        /*
+        case 'ArrowLeft':
+        case 'a':
+            selectChapter(false);
+            break
+        case 'ArrowRight':
+        case 'd':
+            selectChapter(true);
+        break
+        */
+        default:
+      }
+    });
+
+    function selectVerse(isDown) {
+      if (selectedId == 0) {
+        if (isDown) {
+          select(getGroupIdByIndex(0));
+        } else {
+          select(getGroupIdByIndex(VERSE_GROUP_IDS.length - 1))
+        }
+      } else {
+        setSelectedGroup(getIndexOfGroupId(selectedId), isDown);
+      }
+    }
+
+    function setSelectedGroup(groupIdIndex, isDown) {
+      if (groupIdIndex < 0 || groupIdIndex >= VERSE_GROUP_IDS.length) {
+        select(0);
+      } else {
+        if (isDown) {
+          const down = groupIdIndex + 1;
+          if (down < VERSE_GROUP_IDS.length) {
+            select(getGroupIdByIndex(down));
+          }
+          else { /* next chapter */ }
+        } else {
+          const up = groupIdIndex - 1;
+          if (up > -1) {
+            select(getGroupIdByIndex(up));
+          }
+          else { /* previous chapter */ }
+        }
+      }
+    }
+
+    function getIndexOfGroupId(groupId) {
+      for (let index = 0; index < VERSE_GROUP_IDS.length; index++) {
+        const element = VERSE_GROUP_IDS[index];
+        if (element === groupId) { return index; }
+      }
+      return 0;
+    }
+
+    function getGroupIdByIndex(groupIdIndex) {
+      if (groupIdIndex < 0 || groupIdIndex >= VERSE_GROUP_IDS.length) {
+        return 0;
+      }
+      return VERSE_GROUP_IDS[groupIdIndex];
+    }
+  </script>
+  <script>
+    /* Constants */
+    const JS_VERSION = "v.020_2026-08-02";
+
+    /* Data */
+
+    const LANGUAGES = [
+      ["en", "English", "Hungarian"],
+      ["hu", "Angol", "Magyar"]
+    ];
+
+    const LABELS = [
+      ["Bible", "Bible", "Biblia"],
+      ["Bible_Part_Page", "Bible part page", "Biblia rész oldal"],
+      ["Bottom_Next", "Next", "Következő"],
+      ["Bottom_Previous", "Previous", "Előző"],
+      ["CSS_Version", "CSS version", "CSS verzió"],
+      ["Color_Theme", "Color theme", "Szín séma"],
+      ["CrossReferences_Visibility", "With Cross-references?", "Kereszthivatkozásokkal?"],
+      ["Dark", "Dark", "Sötét"],
+      ["Dark_Theme", "Dark theme", "Sötét téma"],
+      ["Date", "Date", "Dátum"],
+      ["Footnote_Matches", "Footnote", "Lábjegyzet"],
+      ["Footnotes", "Footnotes", "Lábjegyzetek"],
+      ["Headline_Matches", "Headline", "Cím sor"],
+      ["Headlines_Visibility", "With Headlines?", "Címsorokkal?"],
+      ["Hide_CrossReferences", "No", "Nem"],
+      ["Hide_Headlines", "No", "Nem"],
+      ["Html_Version", "Html version", "HTML verzió"],
+      ["Information", "Information", "Információ"],
+      ["JS_Version", "JS version", "JS verzió"],
+      ["VerseByVerse_Format", "Verse-by-verse Format", "Versek egymásután forma"],
+      ["VerseByVerseFormat_If_Possible", "Verse-by-verse format if possible", "Vers, vers után forma, ha lehetséges"],
+      ["Language", "Language", "Nyelve"],
+      ["Languages", "Languages", "Nyelvek"],
+      ["Light", "Light", "Világos"],
+      ["Paragraph_Format", "Paragraph format", "Bekezdések forma"],
+      ["Matches", "Matches", "Találatok"],
+      ["Other", "Other", "Más"],
+      ["Previous_Identifier", "Previous identifier", "Előző azonosító"],
+      ["Program", "Program", "Program"],
+      ["Program_Name", "Program name", "Program név"],
+      ["Program_Version", "Program version", "Program verzió"],
+      ["Reader_Style", "Reader style", "Olvasó stílusa"],
+      ["Search_Result_Page", "Search result page", "Keresés eredmény oldal"],
+      ["Searched_Text", "Searched text", "Keresett szöveg"],
+      ["Selected_Identifier", "Selected identifier", "Kiválasztott azonosító"],
+      ["Separated", "Separated", "Külön"],
+      ["Settings", "Settings", "Beállítások"],
+      ["Show_CrossReferences", "Yes", "Igen"],
+      ["Show_Headlines", "Yes", "Igen"],
+      ["Sorting_Type", "Sorting type", "Rendezés típusa"],
+      ["Statistic", "Statistic", "Statisztika"],
+      ["TOP", "TOP", "TOP"],
+      ["Together", "Together", "Együtt"],
+      ["Top_Next", "Next", "Következő"],
+      ["Top_Previous", "Previous", "Előző"],
+      ["Up", "Up", "Fel"],
+      ["User_Settings", "User settings", "Felhasználói beállítások"],
+      ["Verse_Matches", "Verse", "Verse"],
+      ["Verses", "Verses", "Versek"],
+      ["Version", "Version", "Verzió"],
+      ["With_Audios", "with Audios", "Hang anyagokkal"],
+      ["With_CrossReferences", "with Cross-references", "Kereszthivatkozásokkal"],
+      ["With_Footnotes", "with Footnotes", "Lábjegyzetekkel"],
+      ["With_Headlines", "with Headlines", "Cím sorokkal"],
+      ["With_Statistic", "with Statistic", "Statisztikával"],
+      ["With_Verses", "with Verses", "Versekkel"],
+      ["With_Wordlist", "with Wordlist", "Szó listával"]
+      //["7#Multi_Labels", "Multi labels", "Többszörös címkék"] // from 0 to n#LabelName // n = MAX = 7
+    ];
+
+    /* Variables */
+    let previousId = "-1";
+    let selectedId = "-1";
+    let readerStyleType = true;
+    let isVisibleCrs = true;
+    let isVisibleHls = true;
+    let selectedLanguageId = 0;
+
+    const BOOLVALUES = [
+      ["Language", LANGUAGE],
+      ["VerseByVerseFormat_If_Possible", VERSEBYVERSE],
+      ["Dark", DARK],
+      ["With_Hls", WITH_HLS],
+      ["With_Vrs", WITH_VRS],
+      ["With_Crs", WITH_CRS],
+      ["With_Fns", WITH_FNS],
+      ["With_Wl", WITH_WL],
+      ["With_Ads", WITH_ADS],
+      ["With_Stat", WITH_STAT],
+    ];
+
+    /* INITIALIZE */
+    function init() {
+      /* Language */
+      addLanguages();
+      /* Page setter settings */
+      setHeadlinesSetterVisiblity();
+      setCrossReferencesSetterVisiblity();
+      setFootnotesVisiblity();
+      setStatisticVisiblity();
+      setWordListVisiblity();
+      setTitleVisiblity();
+      setReaderStyleSetterVisiblity();
+      setCrs(true);
+      setHls(true);
+      /* Selection */
+      setSelectedId();
+      setPrevAndSelLabels();
+      setUserSettings();
+    }
+
+    function setUserSettings() {
+      setUserLanguage();
+      setUserColorTheme();
+      setSortingTypeValueVisibility();
+      setUserReaderStyle();
+      setLabel(toValueId(BOOLVALUES[0][0]), LANGUAGES[LANGUAGE][1 + LANGUAGE]);
+      setBoolValues();
+    }
+
+    function setBoolValues() {
+      for (let index = 1; index < BOOLVALUES.length; index++) {
+        const element = BOOLVALUES[index];
+        setLabel(toValueId(element[0]), getSign(element[1]));
+      }
+    }
+
+    function getSign(value) {
+      return (value ? '<span class="green">✓' : '<span class="red">✗') + "</span>";
+    }
+
+    /* LANGUAGE */
+
+    function addLanguages() {
+      for (let index = 0; index < LANGUAGES.length; index++) {
+        const english = LANGUAGES[0];
+        const other = LANGUAGES[selectedLanguageId];
+        const shift = index + 1;
+        addToLanguageSetter(addLangInputTag(english[shift], index, index == 0));
+        addToLanguageSetter(addLangLabelTag(english[shift], other[shift]));
+      }
+    }
+
+    function addToLanguageSetter(newTag) {
+      document.getElementById('languageSetter').appendChild(newTag);
+    }
+
+    function addLangInputTag(id, langId, state) {
+      let newTag = document.createElement('input');
+      newTag.id = toId(id);;
+      newTag.type = 'radio';
+      newTag.name = 'langSetter';
+      newTag.setAttribute("onclick", "if(this.checked){setLabelsAndValues(" + langId + ");}");
+      newTag.setAttribute(state ? 'checked' : 'unchecked', '');
+      return newTag;
+    }
+
+    function addLangLabelTag(id, value) {
+      let newTag = document.createElement('label');
+      newTag.id = toLabelId(id);
+      newTag.setAttribute("for", toId(id));
+      newTag.innerHTML = value;
+      return newTag;
+    }
+
+    function setUserLanguage() {
+      setLabelsAndValues(LANGUAGE);
+      setLanguageCheckedState(LANGUAGE == 0);
+    }
+
+    /* LABELS AND VALUES */
+
+    function setLabelsAndValues(langId) {
+      selectedLanguageId = langId;
+      setHtmlLangAttribute(LANGUAGES[selectedLanguageId][0]);
+      setLangLabels();
+      setLabels();
+      setValues();
+    }
+
+    function setHtmlLangAttribute(value) {
+      let element = document.getElementsByTagName('html');
+      if (element[0]) { element[0].setAttribute('lang', value); }
+    }
+
+    function setLangLabels() {
+      const english = LANGUAGES[0];
+      const other = LANGUAGES[selectedLanguageId];
+      for (let index = 1; index < other.length; index++) {
+        setLabel(toLabelId(english[index]), other[index]);
+      }
+    }
+
+    /* LABELS */
+
+    function setLabels() {
+      const shift = selectedLanguageId + 1;
+      for (let index = 0; index < LABELS.length; index++) {
+        const element = LABELS[index];
+        if (element) {
+          if (element[0] != null && element[0].length > 0) {
+            if (element[0].search(/^\d+#/) == -1) {
+              setLabel(toLabelId(element[0]), element[shift]);
+            } else {
+              setMultiLabels(element[0], element[shift]);
+            }
+          }
+        }
+      }
+    }
+
+    function setMultiLabels(id, value) {
+      let digit = id.replace(/#.*/, "");
+      let label = id.replace(/^\d+#/, "");
+      for (let index = 0; index <= digit; index++) {
+        setLabel(toMultiId(label, index), value);
+      }
+    }
+
+    function setLabel(id, value) {
+      let element = document.getElementById(id);
+      if (element != null) {
+        element.innerHTML = value;
+        console.log("set Label: " + id + " to " + value)
+      }
+      else { console.log("setLabels msg: Error! Element was not found. " + id + "; " + value) }
+    }
+    function toLabelId(name) { return 'l' + name; }
+    function toMultiId(name, index) { return 'm' + name + "_" + index; }
+    function toValueId(name) { return 'v' + name; }
+    function toId(name) { return name[0].toLowerCase() + name.substring(1); }
+
+    /* VALUES */
+
+    function setValues() {
+      setLabel('vJS_Version', JS_VERSION);
+      for (let index = 0; index < VALUES.length; index++) {
+        const element = VALUES[index];
+        if (element) {
+          if (element[0] != null && element[0].length > 0) {
+            setLabel(toValueId(element[0]), element[1]);
+          }
+          else { console.log("setValues msg: Error! Element was not found. " + element[0]) }
+        }
+      }
+    }
+
+    function setSortingTypeValueVisibility() { document.getElementById(SORTING ? "lSeparated" : "lTogether").style.display = "none"; }
+
+    /* COLORS */
+
+    function setColorTheme(isLight) {
+      let root = document.querySelector(':root');
+      if (isLight) {
+        root.style.setProperty('--textColor', 'darkblue');
+        root.style.setProperty('--bgColor', 'white');
+        root.style.setProperty('--sTextColor', 'whitesmoke');
+        root.style.setProperty('--sBgColor', 'darkblue');
+        root.style.setProperty('--borderColor', 'blue');
+        root.style.setProperty('--myColor', 'rgb(255, 135, 0)');
+      } else {
+        root.style.setProperty('--textColor', 'white');
+        root.style.setProperty('--bgColor', 'black');
+        root.style.setProperty('--sTextColor', 'whitesmoke');
+        root.style.setProperty('--sBgColor', 'rgb(30, 30, 30)');
+        root.style.setProperty('--borderColor', 'gray');
+        root.style.setProperty('--myColor', 'rgb(255, 185, 0)');
+      }
+    }
+
+    function setUserColorTheme() {
+      setColorTheme(!DARK);
+      setColorThemeCheckedState(!DARK);
+    }
+
+    /* PAGE SETTER PARTS VISIBLITY*/
+    function setHeadlinesSetterVisiblity() { setVisiblity("hlsVisibility", WITH_HLS); }
+    function setCrossReferencesSetterVisiblity() { setVisiblity("crsVisibility", WITH_CRS); }
+    function setFootnotesVisiblity() { setVisiblity("fnsVisibility", WITH_FNS); }
+    function setStatisticVisiblity() { setVisiblity("statVisibility", WITH_STAT); }
+    function setWordListVisiblity() { setVisiblity("wlVisibility", WITH_WL); }
+    function setTitleVisiblity() { setVisiblity("lSearch_Result_Page", WITH_STAT); setVisiblity("lBible_Part_Page", !WITH_STAT); }
+    function setVisiblity(id, value) { document.getElementById(id).style.display = (value ? "block" : "none"); }
+    function setReaderStyleSetterVisiblity() { document.getElementById("readerStyle").style.display = (SORTING ? "none" : "block"); }
+
+    /* HEADLINES */
+    function setHls(isVisible) {
+      isVisibleHls = isVisible;
+      setDisplay(document.getElementsByClassName("headline"),
+        isVisibleHls ? whichVersesStyle() : "none");
+    }
+
+    /* CROSSLINKS */
+    function setCrs(isVisible) {
+      isVisibleCrs = isVisible;
+      setDisplay(document.getElementsByClassName("crossReferences"),
+        isVisibleCrs ? whichVersesStyle() : "none");
+    }
+
+    /* READER STYLE */
+    function isParagraphFormat() { return readerStyleType; }
+
+    function setReaderStyle(style) {
+      readerStyleType = style;
+      if (!isParagraphFormat()) { setSelectedIdStyle('normal group'); setId(0); }
+      setSectionStyle();
+      setGroupStyles();
+      setHeadlinesStyles();
+      setVerseStyles();
+      setBBChIdStyles();
+      setCrossReferencesStyles();
+      setHls(isParagraphFormat());
+      setCrs(isParagraphFormat());
+      setHlsSetterVisiblityCheckedState(isParagraphFormat());
+      setCrsSetterVisiblityCheckedState(isParagraphFormat());
+    }
+
+    function setSectionStyle() { setDisplay(document.getElementsByTagName('section'), isParagraphFormat() ? "flex" : "inline"); }
+
+    function setGroupStyles() { setDisplay(document.getElementsByClassName('group'), whichVersesStyle()); }
+    function setHeadlinesStyles() { if (isVisibleHls) { setDisplay(document.getElementsByClassName('headline'), whichVersesStyle()); } }
+    function setVerseStyles() { setDisplay(document.getElementsByClassName('verse'), whichVersesStyle()); }
+    function setCrossReferencesStyles() { if (isVisibleCrs) { setDisplay(document.getElementsByClassName('crossReferences'), whichVersesStyle()); } }
+    function whichVersesStyle() { return isParagraphFormat() ? "block" : "inline" }
+
+    function setBBChIdStyles() { setDisplay(document.getElementsByClassName("bbchId"), isParagraphFormat() ? "inline" : "none"); }
+
+    function setDisplay(elements, display) {
+      if (elements != null && elements.length > 0) {
+        for (let index = 0; index < elements.length; index++) {
+          let element = elements[index];
+          if (display != null) {
+            element.style.display = display;
+          }
+        }
+      }
+    }
+
+    function setUserReaderStyle() {
+      let value;
+      if (SORTING) {
+        value = SORTING;
+      } else {
+        value = !VERSEBYVERSE;
+      }
+      setReaderStyle(value);
+      setReaderStyleCheckedState(value);
+    }
+
+    /* CHECKED STATE */
+    function setHlsSetterVisiblityCheckedState(value) { setCheckedState(value ? 'showHls' : 'hideHls', true); }
+    function setCrsSetterVisiblityCheckedState(value) { setCheckedState(value ? 'showCrs' : 'hideCrs', true); }
+    function setReaderStyleCheckedState(value) { setCheckedState(value ? 'styleParagraph_Format' : 'styleVerseByVerse_Format', true); }
+    function setColorThemeCheckedState(value) { setCheckedState(value ? 'lightCt' : 'darkCt', true); }
+    function setLanguageCheckedState(value) { setCheckedState(value ? 'english' : toId(LANGUAGES[0][selectedLanguageId + 1]), true); }
+    function setCheckedState(name, value) { document.getElementById(name).checked = value }
+
+    /* SELECTED VERSE */
+    function select(id) { set_Selected(id); }
+    function setId(id) { previousId = selectedId; selectedId = id; setPrevAndSelLabels(); }
+    function setPrevAndSelLabels() { setPreviousLabel(); setSelectedLabel(); }
+    function setPreviousLabel() { setLabel('vPrevious_Identifier', previousId); }
+    function setSelectedLabel() { setLabel('vSelected_Identifier', selectedId); }
+
+    function setSelectedId() { if (isParagraphFormat()) { setSelectedIdStyle('selected group'); } }
+    function setSelectedIdStyle(className) {
+      if (selectedId != null) {
+        let element = document.getElementById(selectedId);
+        if (selectedId != previousId && element != null) {
+          element.className = className;
+          setPreviousIdStyle('normal group');
+        }
+      }
+    }
+
+    function setPreviousIdStyle(className) {
+      if (previousId != null) {
+        element = document.getElementById(previousId);
+        if (element != null) {
+          element.className = className;
+        }
+      }
+    }
+
+    function set_Selected(id) {
+      if (VERSE_GROUP_IDS.indexOf(id) == -1) {
+        setId(-1);
+        setPreviousIdStyle('normal group');
+        post_message("error:Id was not found! " + id);
+      }
+      else {
+        setId(id);
+        setSelectedId();
+        post_message("selected:" + id);
+      }
+    }
+  </script>
+</head>
+
+<body onload="init()">
+  <div id="titleText">
+    <h1 id="lBible_Part_Page">Bible part page</h1>
+    <h1 id="lSearch_Result_Page">Search result page</h1>
+  </div>
+  <header>
+    <details>
+      <summary>
+        <h2 id="lSettings">Settings</h2>
+      </summary>
+      <div id="languageSetter">
+        <h6 id="lLanguages">Languages</h6>
+      </div>
+      <div id="colorThemeSetter">
+        <h6 id="lColor_Theme">Color Theme</h6>
+        <input id="lightCt" type="radio" name="ctSetter" onchange="if(this.checked){setColorTheme(true);}" unchecked>
+        <label id="lLight" for="lightCt">Light</label>
+        <input id="darkCt" type="radio" name="ctSetter" onchange="if(this.checked){setColorTheme(false);}" checked>
+        <label id="lDark" for="darkCt">Dark</label>
+      </div>
+      <div id="readerStyle">
+        <h6 id="lReader_Style">Reader Style</h6>
+        <input id="styleParagraph_Format" type="radio" name="selectStyle"
+          onchange="if(this.checked){setReaderStyle(true);}" checked>
+        <label id="lParagraph_Format" for="styleParagraphFormat">Paragraph format</label>
+        <input id="styleVerseByVerse_Format" type="radio" name="selectStyle"
+          onchange="if(this.checked){setReaderStyle(false);}" unchecked>
+        <label id="lVerseByVerse_Format" for="styleVerseByVerseFormat">Verse-by-verse format</label>
+      </div>
+      <div id="hlsVisibility">
+        <h6 id="lHeadlines_Visibility">Headlines visibility</h6>
+        <input id="showHls" type="radio" name="selectHlsV" onchange="if(this.checked){setHls(true);}" checked>
+        <label id="lShow_Headlines" for="showHls">Show Headlines</label>
+        <input id="hideHls" type="radio" name="selectHlsV" onchange="if(this.checked){setHls(false);}" unchecked>
+        <label id="lHide_Headlines" for="hideHls">Hide Headlines</label>
+      </div>
+      <div id="crsVisibility">
+        <h6 id="lCrossReferences_Visibility">Cross-references visibility</h6>
+        <input id="showCrs" type="radio" name="selectCrsV" onchange="if(this.checked){setCrs(true);}" checked>
+        <label id="lShow_CrossReferences" for="showCrs">Show Cross-references</label>
+        <input id="hideCrs" type="radio" name="selectCrsV" onchange="if(this.checked){setCrs(false);}" unchecked>
+        <label id="lHide_CrossReferences" for="hideCrs">Hide Cross-references</label>
+      </div>
+    </details>
+  </header>

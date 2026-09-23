@@ -1,0 +1,30 @@
+﻿
+
+### from WordNet
+
+#### Anchor example
+
+	<a href="define:crimson">crimson</a>
+	
+#### Navigation method example
+
+		#region mWebBrowser_Navigating
+		
+		private void mWebBrowser_Navigating( object sender, WebBrowserNavigatingEventArgs e )
+		{
+			string url = e.Url.ToString();
+
+			if( url.StartsWith( "define" ) )
+			{
+				e.Cancel = true;
+
+				string[] segments = url.Split( ':' );
+				if( segments.Length > 1 )
+				{
+					string word = segments[ 1 ];
+					DefineWord( word );
+				}
+			}
+		}
+		
+		#endregion mWebBrowser_Navigating

@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BibleBooksNE_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BibleBooksNE_Icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BibleBooksNE_Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BibleBooksNE_Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bibles" xml:space="preserve">
+    <value>Bibles</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Books</value>
+  </data>
+  <data name="Chapters" xml:space="preserve">
+    <value>Chapters</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Redo</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Undo</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error!</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning!</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question!</value>
+  </data>
+  <data name="TestIsFinished" xml:space="preserve">
+    <value>Test is finished!</value>
+  </data>
+  <data name="MessagesEmptyHtmlFileTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlMessageTemplates\MessagesEmptyHtmlFileTemplate_001.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="UserHomeDirectory" xml:space="preserve">
+    <value>User's Home Directory</value>
+  </data>
+  <data name="MessagesScript" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlMessageTemplates\MessagesScript_001.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="MessagesStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlMessageTemplates\MessagesStyle_001.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="NotImplementedYet" xml:space="preserve">
+    <value>Not implemented yet!</value>
+  </data>
+  <data name="ErrorInNavigation" xml:space="preserve">
+    <value>Error in navigation!</value>
+  </data>
+  <data name="FileReadingError" xml:space="preserve">
+    <value>File reading error.</value>
+  </data>
+  <data name="FileWritingError" xml:space="preserve">
+    <value>File writing error.</value>
+  </data>
+  <data name="TemplateResourceFileAccessError" xml:space="preserve">
+    <value>Template resource file access error.</value>
+  </data>
+  <data name="MissingDatabaseNameError" xml:space="preserve">
+    <value>Missing database name error.</value>
+  </data>
+  <data name="DatabaseReadingError" xml:space="preserve">
+    <value>Database reading error.</value>
+  </data>
+  <data name="TheNumberOfRowsInserted/UpdatedAffectedByIt" xml:space="preserve">
+    <value>The number of rows inserted/updated affected by it:</value>
+  </data>
+  <data name="JavaScriptRuntimeError" xml:space="preserve">
+    <value>JavaScript runtime error!</value>
+  </data>
+  <data name="TextFile" xml:space="preserve">
+    <value>Text file</value>
+  </data>
+  <data name="MarkdownFile" xml:space="preserve">
+    <value>Markdown file</value>
+  </data>
+  <data name="OtherFile" xml:space="preserve">
+    <value>Other file</value>
+  </data>
+  <data name="FilesToOpen" xml:space="preserve">
+    <value>Files to open</value>
+  </data>
+  <data name="OnlyTextFiles" xml:space="preserve">
+    <value>Only text files</value>
+  </data>
+  <data name="OnlyHtmlFiles" xml:space="preserve">
+    <value>Only html files</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>All files</value>
+  </data>
+  <data name="FileIsNotValid" xml:space="preserve">
+    <value>The file is not valid.</value>
+  </data>
+  <data name="FileNotExist" xml:space="preserve">
+    <value>The file not exist.</value>
+  </data>
+  <data name="GeneratedBy" xml:space="preserve">
+    <value>Generated by</value>
+  </data>
+  <data name="WelcomeToBibleBooks" xml:space="preserve">
+    <value>Welcome to Bible &amp; Books!</value>
+  </data>
+  <data name="UserActionPage" xml:space="preserve">
+    <value>User Action Page</value>
+  </data>
+  <data name="NoDatabases" xml:space="preserve">
+    <value>No databases!</value>
+  </data>
+  <data name="SimpleTextPage" xml:space="preserve">
+    <value>Simple Text Page</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Not Found!</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Selection!</value>
+  </data>
+  <data name="Matches" xml:space="preserve">
+    <value>Matches</value>
+  </data>
+  <data name="SorrySomethingWentWrong" xml:space="preserve">
+    <value>Sorry, something went wrong!</value>
+  </data>
+  <data name="PleaseSelectOneOrMoreBibleWithoutZero" xml:space="preserve">
+    <value>Please, select one or more Bible without 0!</value>
+  </data>
+  <data name="PleaseSelectBook" xml:space="preserve">
+    <value>Please, select Book!</value>
+  </data>
+  <data name="PleaseSelectChapter" xml:space="preserve">
+    <value>Please, select Chapter!</value>
+  </data>
+  <data name="PleaseSelectVerse" xml:space="preserve">
+    <value>Please, select Verse!</value>
+  </data>
+  <data name="DatabaseWasNotFound" xml:space="preserve">
+    <value>Database was not found.</value>
+  </data>
+  <data name="NotFoundAnyBookItem" xml:space="preserve">
+    <value>Not found any Book item.</value>
+  </data>
+  <data name="NotFoundAnyChapterItem" xml:space="preserve">
+    <value>Not found any Chapter item.</value>
+  </data>
+  <data name="NotFoundAnyVerseItem" xml:space="preserve">
+    <value>Not found any Verse item.</value>
+  </data>
+  <data name="NoMatches" xml:space="preserve">
+    <value>No matches!</value>
+  </data>
+  <data name="ProgramDirectories" xml:space="preserve">
+    <value>Program Directories</value>
+  </data>
+  <data name="UserDocuments" xml:space="preserve">
+    <value>User's Document Directory</value>
+  </data>
+  <data name="DefaultProgramHomeDirectory" xml:space="preserve">
+    <value>Default Program Home Directory</value>
+  </data>
+  <data name="DefaultDatabaseDirectory" xml:space="preserve">
+    <value>Default Database Directory</value>
+  </data>
+  <data name="DefaultResourcesDirectory" xml:space="preserve">
+    <value>Default Resources Directory</value>
+  </data>
+  <data name="AlternativeDatabaseDirectory" xml:space="preserve">
+    <value>Alternative Database Directory</value>
+  </data>
+  <data name="AlternativeProgramHomeDirectory" xml:space="preserve">
+    <value>Alternative Program Home Directory</value>
+  </data>
+  <data name="AlternativeResourcesDirectory" xml:space="preserve">
+    <value>Alternative Resources Directory</value>
+  </data>
+  <data name="BaseDirectory" xml:space="preserve">
+    <value>Base Directory</value>
+  </data>
+  <data name="UserDatabaseDirectory" xml:space="preserve">
+    <value>User's Database Directory</value>
+  </data>
+  <data name="UserResourcesDirectory" xml:space="preserve">
+    <value>User's Resources Directory</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Identifier" xml:space="preserve">
+    <value>Identifier</value>
+  </data>
+  <data name="LongName" xml:space="preserve">
+    <value>Long name</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>Short name</value>
+  </data>
+  <data name="DirectoryName" xml:space="preserve">
+    <value>Directory name</value>
+  </data>
+  <data name="BibleInformation" xml:space="preserve">
+    <value>Bible information</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="SourceUrl" xml:space="preserve">
+    <value>Source url</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome!</value>
+  </data>
+  <data name="Verses" xml:space="preserve">
+    <value>Verses</value>
+  </data>
+  <data name="Footnotes" xml:space="preserve">
+    <value>Footnotes</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="ReaderStyle" xml:space="preserve">
+    <value>Reader Style</value>
+  </data>
+  <data name="ParalaellBiblesMode" xml:space="preserve">
+    <value>Parallel bibles mode</value>
+  </data>
+  <data name="SingleBibleMode" xml:space="preserve">
+    <value>Single bible mode</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Justify" xml:space="preserve">
+    <value>Justify</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Empty</value>
+  </data>
+  <data name="SearchedText" xml:space="preserve">
+    <value>Searched text</value>
+  </data>
+  <data name="DatabaseInformation" xml:space="preserve">
+    <value>Database Information</value>
+  </data>
+  <data name="Databases" xml:space="preserve">
+    <value>Databases</value>
+  </data>
+  <data name="Counters" xml:space="preserve">
+    <value>Counters</value>
+  </data>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Change Log</value>
+  </data>
+  <data name="BookNames" xml:space="preserve">
+    <value>Book Names</value>
+  </data>
+  <data name="BibleParts" xml:space="preserve">
+    <value>Bible Parts</value>
+  </data>
+  <data name="BookParts" xml:space="preserve">
+    <value>Book Parts</value>
+  </data>
+  <data name="ChapterParts" xml:space="preserve">
+    <value>Chapter Parts</value>
+  </data>
+  <data name="Crosslinks" xml:space="preserve">
+    <value>Cross-references</value>
+  </data>
+  <data name="Headlines" xml:space="preserve">
+    <value>Headlines</value>
+  </data>
+  <data name="WordsList" xml:space="preserve">
+    <value>WordsList</value>
+  </data>
+  <data name="DatabaseSubDirNotExist" xml:space="preserve">
+    <value>Database subdirectory not exist!</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="FileNameIsNotValid" xml:space="preserve">
+    <value>Filename is not valid.</value>
+  </data>
+  <data name="NumberOfMatches" xml:space="preserve">
+    <value>Number of matches</value>
+  </data>
+  <data name="NumberOfAllMatches" xml:space="preserve">
+    <value>Number of all matches</value>
+  </data>
+  <data name="Audios" xml:space="preserve">
+    <value>Audios</value>
+  </data>
+  <data name="AllMatches" xml:space="preserve">
+    <value>All matches</value>
+  </data>
+  <data name="HeadlineMatches" xml:space="preserve">
+    <value>Headline matches</value>
+  </data>
+  <data name="VerseMatches" xml:space="preserve">
+    <value>Verse matches</value>
+  </data>
+  <data name="FootnoteMatches" xml:space="preserve">
+    <value>Footnote matches</value>
+  </data>
+  <data name="VersesHtmlFileTemplate_FirstPart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebPageTemplates\VersesHtmlFileTemplate_v_9_1_BBNE.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="HtmlFile" xml:space="preserve">
+    <value>Html File</value>
+  </data>
+  <data name="FileSavingError" xml:space="preserve">
+    <value>File Saving Error</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Hungarian" xml:space="preserve">
+    <value>Hungarian</value>
+  </data>
+  <data name="SearchResultPage" xml:space="preserve">
+    <value>Search result page</value>
+  </data>
+  <data name="Document" xml:space="preserve">
+    <value>Document</value>
+  </data>
+  <data name="DocumentPage" xml:space="preserve">
+    <value>Document / Page</value>
+  </data>
+  <data name="VersesHtmlFileTemplate_ThirdPart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebPageTemplates\VersesHtmlFileTemplate_v_9_3_BBNE.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="VersesHtmlFileTemplate_SecondPart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebPageTemplates\VersesHtmlFileTemplate_v_9_2_BBNE.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="BiblePartPage" xml:space="preserve">
+    <value>Bible part page</value>
+  </data>
+  <data name="HelpFileForBBNE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Help\HelpFileForBBNE_EN.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="HelpFileNotFound" xml:space="preserve">
+    <value>Help file was not found!</value>
+  </data>
+</root>

@@ -1,0 +1,12 @@
+
+	- make html file by settings
+	- identifier converter, handler (numbers to text, etc)
+
+	# Program start
+
+		0.	Args Handler
+		1.	InitComponent
+		2.	Databases
+		3.	User Setting
+		4.	View Setting
+

@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="BibleBooksNE_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BibleBooksNE_Icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BibleBooksNE_Picture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BibleBooksNE_Picture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bibles" xml:space="preserve">
+    <value>Bibliák</value>
+  </data>
+  <data name="Books" xml:space="preserve">
+    <value>Könyvek</value>
+  </data>
+  <data name="Chapters" xml:space="preserve">
+    <value>Fejezetek</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>Visszavonás</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>Újra</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>Kivágás</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Másolás</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Beillesztés</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Törlés</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Minden Kijelölése</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hiba!</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Figyelem!</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Információ</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Kérdés!</value>
+  </data>
+  <data name="TestIsFinished" xml:space="preserve">
+    <value>Teszt véget ért!</value>
+  </data>
+  <data name="MessagesEmptyHtmlFileTemplate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlMessageTemplates\MessagesEmptyHtmlFileTemplate_001.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="UserHomeDirectory" xml:space="preserve">
+    <value>Felhasználó Alap Könyvtára</value>
+  </data>
+  <data name="MessagesScript" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlMessageTemplates\MessagesScript_001.js;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="MessagesStyle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HtmlMessageTemplates\MessagesStyle_001.css;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="NotImplementedYet" xml:space="preserve">
+    <value>Még nincs megvalósítva!</value>
+  </data>
+  <data name="ErrorInNavigation" xml:space="preserve">
+    <value>Hiba a navigációban!</value>
+  </data>
+  <data name="FileReadingError" xml:space="preserve">
+    <value>Fájl olvasási hiba.</value>
+  </data>
+  <data name="FileWritingError" xml:space="preserve">
+    <value>Fájl írási hiba.</value>
+  </data>
+  <data name="TemplateResourceFileAccessError" xml:space="preserve">
+    <value>Sablon forrásfájl hozzáférési hiba.</value>
+  </data>
+  <data name="MissingDatabaseNameError" xml:space="preserve">
+    <value>Hiányzó adatbázis név hiba.</value>
+  </data>
+  <data name="DatabaseReadingError" xml:space="preserve">
+    <value>Adatbázis olvasási hiba.</value>
+  </data>
+  <data name="TheNumberOfRowsInserted/UpdatedAffectedByIt" xml:space="preserve">
+    <value>A sorok száma, amit a beillesztés/frissítés érintett:</value>
+  </data>
+  <data name="JavaScriptRuntimeError" xml:space="preserve">
+    <value>JavaScript futásidejű hiba!</value>
+  </data>
+  <data name="TextFile" xml:space="preserve">
+    <value>Szöveges fájl</value>
+  </data>
+  <data name="MarkdownFile" xml:space="preserve">
+    <value>Markdown fájl</value>
+  </data>
+  <data name="OtherFile" xml:space="preserve">
+    <value>Más fájl típus</value>
+  </data>
+  <data name="FilesToOpen" xml:space="preserve">
+    <value>Megnyitható fájlok</value>
+  </data>
+  <data name="OnlyTextFiles" xml:space="preserve">
+    <value>Csak szöveges fájlok</value>
+  </data>
+  <data name="OnlyHtmlFiles" xml:space="preserve">
+    <value>Csak html fájlok</value>
+  </data>
+  <data name="AllFiles" xml:space="preserve">
+    <value>Minden fájl</value>
+  </data>
+  <data name="FileIsNotValid" xml:space="preserve">
+    <value>A fájl nem megfelelő!</value>
+  </data>
+  <data name="FileNotExist" xml:space="preserve">
+    <value>A fájl nem létezik!</value>
+  </data>
+  <data name="GeneratedBy" xml:space="preserve">
+    <value>Létrehozva</value>
+  </data>
+  <data name="WelcomeToBibleBooks" xml:space="preserve">
+    <value>Üdvözli Önt a Biblia és Könyvek!</value>
+  </data>
+  <data name="UserActionPage" xml:space="preserve">
+    <value>Felhasználói Aktivitás Oldal</value>
+  </data>
+  <data name="NoDatabases" xml:space="preserve">
+    <value>Nincsenek adatbázisok!</value>
+  </data>
+  <data name="SimpleTextPage" xml:space="preserve">
+    <value>Egyszerű Szöveges Oldal</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Nincs találat!</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Kiválasztás!</value>
+  </data>
+  <data name="Matches" xml:space="preserve">
+    <value>Találatok</value>
+  </data>
+  <data name="SorrySomethingWentWrong" xml:space="preserve">
+    <value>Bocsánat, valami rosszul alakult!</value>
+  </data>
+  <data name="PleaseSelectOneOrMoreBibleWithoutZero" xml:space="preserve">
+    <value>Kérem, válasszon egy vagy több Bibliát a 0 nélkül!</value>
+  </data>
+  <data name="PleaseSelectBook" xml:space="preserve">
+    <value>Kérem, válasszon Könyvet!</value>
+  </data>
+  <data name="PleaseSelectChapter" xml:space="preserve">
+    <value>Kérem, válasszon Fejezetet!</value>
+  </data>
+  <data name="PleaseSelectVerse" xml:space="preserve">
+    <value>Kérem, válasszon Verset!</value>
+  </data>
+  <data name="DatabaseWasNotFound" xml:space="preserve">
+    <value>Nem található adatbázis.</value>
+  </data>
+  <data name="NotFoundAnyBookItem" xml:space="preserve">
+    <value>Nem található egyetlen Könyv bejegyzést sem.</value>
+  </data>
+  <data name="NotFoundAnyChapterItem" xml:space="preserve">
+    <value>Nem található egyetlen Fejezet bejegyzést sem.</value>
+  </data>
+  <data name="NotFoundAnyVerseItem" xml:space="preserve">
+    <value>Nem található egyetlen Verse bejegyzést sem.</value>
+  </data>
+  <data name="NoMatches" xml:space="preserve">
+    <value>Nincs egyezés!</value>
+  </data>
+  <data name="ProgramDirectories" xml:space="preserve">
+    <value>Program Könyvtárak</value>
+  </data>
+  <data name="UserDocuments" xml:space="preserve">
+    <value>Felhasználó Dokumentumok Könyvtára</value>
+  </data>
+  <data name="DefaultProgramHomeDirectory" xml:space="preserve">
+    <value>Alapértelmezett Program Alap Könyvtár</value>
+  </data>
+  <data name="DefaultDatabaseDirectory" xml:space="preserve">
+    <value>Alapértelmezett Adatbázis Könyvtár</value>
+  </data>
+  <data name="DefaultResourcesDirectory" xml:space="preserve">
+    <value>Alapértelmezett Források Könyvtár</value>
+  </data>
+  <data name="AlternativeDatabaseDirectory" xml:space="preserve">
+    <value>Alternatív Adatbázis Könyvtár</value>
+  </data>
+  <data name="AlternativeProgramHomeDirectory" xml:space="preserve">
+    <value>Alternatív Program Alap Könyvtár</value>
+  </data>
+  <data name="AlternativeResourcesDirectory" xml:space="preserve">
+    <value>Alternatív Források Könyvtár</value>
+  </data>
+  <data name="BaseDirectory" xml:space="preserve">
+    <value>Alap Könyvtár</value>
+  </data>
+  <data name="UserDatabaseDirectory" xml:space="preserve">
+    <value>Felhasználó Adatbázis Könyvtára</value>
+  </data>
+  <data name="UserResourcesDirectory" xml:space="preserve">
+    <value>Felhasználó Források Könyvtára</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Név</value>
+  </data>
+  <data name="Identifier" xml:space="preserve">
+    <value>Azonosító</value>
+  </data>
+  <data name="LongName" xml:space="preserve">
+    <value>Hosszú név</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>Rövid név</value>
+  </data>
+  <data name="DirectoryName" xml:space="preserve">
+    <value>Könyvtár név</value>
+  </data>
+  <data name="BibleInformation" xml:space="preserve">
+    <value>Biblia Információ</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Nyelv</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Leírás</value>
+  </data>
+  <data name="SourceUrl" xml:space="preserve">
+    <value>Forrás url</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Verzió</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Típus</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>Szerzői jog</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Üdvözlöm!</value>
+  </data>
+  <data name="Verses" xml:space="preserve">
+    <value>Versek</value>
+  </data>
+  <data name="Footnotes" xml:space="preserve">
+    <value>Lábjegyzetek</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="ReaderStyle" xml:space="preserve">
+    <value>Olvasó stílusa</value>
+  </data>
+  <data name="ParalaellBiblesMode" xml:space="preserve">
+    <value>Párhuzamos bibliák mód</value>
+  </data>
+  <data name="SingleBibleMode" xml:space="preserve">
+    <value>Egyszeres biblia mód</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="Justify" xml:space="preserve">
+    <value>Sorkizárt</value>
+  </data>
+  <data name="Empty" xml:space="preserve">
+    <value>Üres</value>
+  </data>
+  <data name="SearchedText" xml:space="preserve">
+    <value>Keresett szöveg</value>
+  </data>
+  <data name="DatabaseInformation" xml:space="preserve">
+    <value>Adatbázis Információk</value>
+  </data>
+  <data name="Databases" xml:space="preserve">
+    <value>Adatbázisok</value>
+  </data>
+  <data name="Counters" xml:space="preserve">
+    <value>Számlálók</value>
+  </data>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Változás Napló</value>
+  </data>
+  <data name="BookNames" xml:space="preserve">
+    <value>Könyv Nevek</value>
+  </data>
+  <data name="BibleParts" xml:space="preserve">
+    <value>Biblia Részek</value>
+  </data>
+  <data name="BookParts" xml:space="preserve">
+    <value>Könyv Részek</value>
+  </data>
+  <data name="ChapterParts" xml:space="preserve">
+    <value>Fejezet Részek</value>
+  </data>
+  <data name="Crosslinks" xml:space="preserve">
+    <value>Kereszthivatkozások</value>
+  </data>
+  <data name="Headlines" xml:space="preserve">
+    <value>Cím sorok</value>
+  </data>
+  <data name="WordsList" xml:space="preserve">
+    <value>Szavak listája</value>
+  </data>
+  <data name="DatabaseSubDirNotExist" xml:space="preserve">
+    <value>Adatbázis alkönyvtár nem létezik!</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>hu</value>
+  </data>
+  <data name="Local" xml:space="preserve">
+    <value>Magyar</value>
+  </data>
+  <data name="FileNameIsNotValid" xml:space="preserve">
+    <value>A fájlnév nem megfelelő!</value>
+  </data>
+  <data name="NumberOfMatches" xml:space="preserve">
+    <value>Találatok száma</value>
+  </data>
+  <data name="NumberOfAllMatches" xml:space="preserve">
+    <value>Összes találat</value>
+  </data>
+  <data name="Audios" xml:space="preserve">
+    <value>Hanganyagok</value>
+  </data>
+  <data name="AllMatches" xml:space="preserve">
+    <value>Minden találat</value>
+  </data>
+  <data name="HeadlineMatches" xml:space="preserve">
+    <value>Cím sor találatok</value>
+  </data>
+  <data name="VerseMatches" xml:space="preserve">
+    <value>Vers találatok</value>
+  </data>
+  <data name="FootnoteMatches" xml:space="preserve">
+    <value>Lábjegyzet találatok</value>
+  </data>
+  <data name="VersesHtmlFileTemplate_FirstPart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebPageTemplates\VersesHtmlFileTemplate_v_9_1_BBNE.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="HtmlFile" xml:space="preserve">
+    <value>Html fájl</value>
+  </data>
+  <data name="FileSavingError" xml:space="preserve">
+    <value>Fájl mentési hiba.</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>Angol</value>
+  </data>
+  <data name="Hungarian" xml:space="preserve">
+    <value>Magyar</value>
+  </data>
+  <data name="SearchResultPage" xml:space="preserve">
+    <value>Keresés eredménye oldal</value>
+  </data>
+  <data name="Document" xml:space="preserve">
+    <value>Dokumentum</value>
+  </data>
+  <data name="DocumentPage" xml:space="preserve">
+    <value>Dokumentum / Oldal</value>
+  </data>
+  <data name="VersesHtmlFileTemplate_ThirdPart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebPageTemplates\VersesHtmlFileTemplate_v_9_3_BBNE.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="VersesHtmlFileTemplate_SecondPart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WebPageTemplates\VersesHtmlFileTemplate_v_9_2_BBNE.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="BiblePartPage" xml:space="preserve">
+    <value>Biblia rész oldal</value>
+  </data>
+  <data name="HelpFileForBBNE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Help\HelpFileForBBNE_HU.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
+  <data name="HelpFileNotFound" xml:space="preserve">
+    <value>Segítség fájl nem található!</value>
+  </data>
+</root>

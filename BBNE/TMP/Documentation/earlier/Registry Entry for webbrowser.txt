@@ -1,0 +1,6 @@
+Add To:
+	HTML file: <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+
+		Registry:		HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\MAIN\FeatureControl\FEATURE_BROWSER_EMULATION
+			Add key:	ProgramName.exe(DWORD) with Value: 11001
+						Gospels_And_Lyrics.exe(DWORD) and value: 11001

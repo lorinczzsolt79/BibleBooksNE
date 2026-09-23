@@ -1,0 +1,88 @@
+
+# ADATBÁZIS ÚTVONAL KEZELÕ
+
+	Fájlrendszer
+		- Útvonal(ak, amivel most ne mfoglalkozunk)
+
+	A megadott könyvtárban vannak-e adatbázisok.
+		- nem, nem tesz semmit
+		- igen
+
+			Adatbátisok a könyvtárban
+				- BibleInfos list and handler
+
+				- Adatbázis struktúra
+
+					Infos:
+						BibleInfos		Teljes lekérdezés.	Vannak-e bibliák és azok adataihoz le kell kérdezni.
+						BookInfos		Teljes lekérdezés.	Ez nem nagy. A megjelenítéshez le kell kérdezni.
+															Dolgozni kell vele a programon belül.
+															Az átalakításokhoz kell. GEN => 001 ; 001 => GEN
+															Meg kell csinálni az átalakítót, hogy bárhonnan elérhetõ legyen.
+																- teljesen szám alapú azonosító
+																	- sima			1.1.1.1.
+																	- formázott		001.001.001.001.
+																	- útvonalszerû	HUK / 1Móz / 1 / 1
+																	- Új hosszú és rövid nevek, amik nem fájrendszerhez kötötek.
+																		magyar hosszú és rövid név
+																		angol hosszú és rövid név
+																		adatbázis átalakítás megint
+
+						Azonosítók		biblia, könyv, fejezet, vers, sorszám, típus
+										
+											- a biblia azonosító átalakításhoz kell a BibleInfos
+													- átalakítás a BibleInfos osztályban ha lehetséges
+
+											- a könyv azonosító átalakításhoz kell a BookInfos
+													- átalakítás a BookInfos osztályban ha lehetséges
+
+											- fejezet, vers, sorszám azonosító szintû átalakítás
+
+											- típus nincs átalakítása
+
+						RowsData		Lekérdezés, count, stb. Statisztikai adatok.
+											Hány könyv van?
+											Van-e Ó szövetség?							Számolás, csak az azonosítók olvasása.
+											Hány Ó szövetségi könyv van?				Számolás, csak az azonosítók olvasása.
+											Van-e Új szövetség?							Számolás, csak az azonosítók olvasása.
+											Hány Új szövetségi könyv van?				Számolás, csak az azonosítók olvasása.
+
+											Vannak-e Lábjegyzet bejegyzések?			nagyobb-e mint 0 , csak ennyi
+											Vannak-e Kereszthivatkozás bejegyzések?		nagyobb-e mint 0 , csak ennyi
+											Vannak-e Szakaszcím bejegyzések?			nagyobb-e mint 0 , csak ennyi
+
+						Frissíteni lehessen ha szükséges. Módosítás után, stb.
+
+					Rows:
+						BibleRows		Lekérdezés, ha szükséges.
+						Footnotes		Lekérdezés, ha szükséges.
+						CrossLinks		Lekérdezés, ha szükséges.
+						Headlines		Lekérdezés, ha szükséges.
+				
+# DB table and field names
+
+	SQL:	HUK		ALTER TABLE "main"."BookInfos" RENAME COLUMN "dirtName" TO "dirName"
+
+	Used	BibleInfos:	longName,shortName,language,description,url,version,oldBookLength,newBookLength,crosslinks,footnotes,myversion,number
+							ezek nem is igazán kellenek, lekérdezhetõ adatok: oldBookLength,newBookLength,crosslinks,footnotes
+
+	Used	BookInfos:	id,biblePart,languages,shortName,longName,dirName
+	Used	BibleRows:	book,chapter,verse,text,crosslinks
+	Used	Footnotes:	book,chapter,vers,id,text
+	New		CrossLinks:	book,chapter,vers,id,text
+	New		Headlines:	book,chapter,vers,id,text
+	Old		BookNames:	oldShortBookNames,oldLongBookNames,newShortBookNames,newLongBookNames,oldBookChapterLengths,newBookChapterLengths
+
+
+# NEW BibleInfos
+
+		"number"			1
+		"longName"			Hungarian Karoli Bible
+		"shortName"			HUK
+		"language"			HU
+		"description"		Károli Gáspár (1529 körül - 1591) gönci református prédikátor. Õ fordította le elõször magyar nyelvre a teljes Bibliát 1590-ben, s ezzel megvalósította a reformáció haladó követelését, a nemzeti nyelvû bibliafordítást. Mûvét - megjelenése helyérõl - vizsolyi bibliaként emlegetik.
+		"url"				
+		"version"			Ismeretlen
+		"myversion"			2025.04.02.001
+
+		magyar hosszú név:	Károli Gáspár Biblia

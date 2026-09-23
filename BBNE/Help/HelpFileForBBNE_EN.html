@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help for Bible&BooksNE v.1.0.0.0 program</title>
+    <style>
+        .cssVersion::after {
+            content: "v.003_2026-07-24";
+            content-visibility: visible;
+        }
+
+        html,
+        body {
+            color: var(--textColor);
+            background-color: var(--bgColor);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+        }
+
+        header,
+        main,
+        footer {
+            margin: 10px;
+        }
+
+        details {
+            margin: 10px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--myColor);
+            padding: 0;
+            display: inline;
+        }
+
+        .normal {
+            margin: 4px;
+            padding: 4px;
+            width: 100%;
+        }
+
+        .normal {
+            color: var(--TextColor);
+            background-color: var(--BgColor);
+            border: solid 1px transparent;
+        }
+
+        /* COLORS */
+
+        :root {
+            --textColor: white;
+            --bgColor: black;
+            --sTextColor: whitesmoke;
+            --sBgColor: rgb(30, 30, 30);
+            --borderColor: gray;
+            --myColor: rgb(255, 185, 0);
+        }
+
+        .red {
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link,
+        #lTop {
+            color: rgb(0, 185, 0)
+        }
+
+        a:active {
+            color: yellow
+        }
+
+        a:visited {
+            color: aqua
+        }
+
+        abbr {
+            color: blueviolet;
+        }
+
+        .green {
+            color: darkgreen;
+        }
+
+        /* Other for messages */
+        html,
+        body {
+            width: 100%;
+            height: 99%;
+        }
+
+        html,
+        body,
+        header,
+        main,
+        footer {
+            display: flex;
+        }
+
+        body {
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        header,
+        footer {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        footer {
+            font-size: small;
+        }
+        .sTitle {
+            font-size: medium;
+        }
+    </style>
+    <script>
+        const JS_VERSION = "v.001_20260724";
+
+        const DARK = false;
+
+        function init() {
+            setColors(!DARK);
+        }
+
+        function setColors(isLight) {
+            let root = document.querySelector(':root');
+            if (isLight) {
+                root.style.setProperty('--textColor', 'darkblue');
+                root.style.setProperty('--bgColor', 'white');
+                root.style.setProperty('--sTextColor', 'whitesmoke');
+                root.style.setProperty('--sBgColor', 'darkblue');
+                root.style.setProperty('--borderColor', 'blue');
+                root.style.setProperty('--myColor', 'rgb(255, 135, 0)');
+            } else {
+                root.style.setProperty('--textColor', 'white');
+                root.style.setProperty('--bgColor', 'black');
+                root.style.setProperty('--sTextColor', 'whitesmoke');
+                root.style.setProperty('--sBgColor', 'rgb(30, 30, 30)');
+                root.style.setProperty('--borderColor', 'gray');
+                root.style.setProperty('--myColor', 'rgb(255, 185, 0)');
+            }
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <header>
+        <h1>HELP</h1>
+        <span class="sTitle">for Bible&BooksNE v.1.0.0.0 program</span>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <span>Zsolt Lőrin&copy;z - Bible&BooksNE v.1.0.0.0</span>
+    </footer>
+</body>
+
+</html>

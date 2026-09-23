@@ -1,0 +1,119 @@
+
+BibleInfos class parts
+
+        /* SQLite data struct
+         *      byte number
+         *      text longBibleName
+         *      text shortBibleName
+         *      text otherBibleName
+         *      text language
+         *      text description
+         *      text url
+         *      text version
+         *      text myversion
+         */
+
+        public string InsertIntoCommand()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("INSERT INTO BibleInfos (number, longBibleName, shortBibleName, otherBibleName, language, description, url, version, myversion) VALUES");
+            sb.Append(Fields());
+            sb.Append("; ");
+            return sb.ToString();
+        }
+
+        private string Fields()
+        {
+            return "(" +
+                Number + ", '" +
+                LongBibleName + "', '" +
+                ShortBibleName + "', '" +
+                OtherBibleName + "', '" +
+                Language + "', '" +
+                Description + "', '" +
+                Url + "', '" +
+                Version + "', '" +
+                MyVersion + "'" +
+                ")";
+        }
+
+BibleRow class parts
+
+        /* SQLite data struct
+         * int  book
+         * int  chapter
+         * int  verse
+         * text text
+         */
+
+        public string InsertIntoCommand()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("INSERT INTO BibleRows (book, chapter, _verse, text) VALUES");
+            sb.Append(Fields());
+            sb.Append("; ");
+            return sb.ToString();
+        }
+
+        public string Fields() {
+            return "\n(" + Book + ", " + Chapter + ", " + Verse + ", '" + Text + "')";
+        }
+        public string InsertIntoCommand()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("INSERT INTO BibleRows (book, chapter, _verse, text) VALUES");
+            sb.Append(Fields());
+            sb.Append("; ");
+            return sb.ToString();
+        }
+
+        public string Fields() {
+            return "\n(" + Book + ", " + Chapter + ", " + Verse + ", '" + Text + "')";
+        }
+
+BookInfo class parts
+        
+        public string AsInsertIntoCommand()
+        {
+            return AsInsertIntoCommand(Fields());
+        }
+
+        public string AsInsertIntoCommand(string lines)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("INSERT INTO BookInfos (id, biblePart, languages, shortName, longName, dirName) VALUES\n");
+            sb.Append(lines);
+            sb.Append("; ");
+            return sb.ToString();
+        }
+
+        public string Fields()
+        {
+            return "(" + Id + ", '" + Part + "', '" + Languages + "', '" + ShortName + "', '" + LongName + "', '" + DirName + "')";
+        }
+
+ FootnoteItem class parts
+
+        /* SQLite data struct
+         *      byte book
+         *      byte chapter
+         *      byte verse
+         *      byte id
+         *      text text
+         */
+
+        public string InsertIntoCommand()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("INSERT INTO Footnotes (book, chapter, verse, id, text) VALUES");
+            sb.Append(Fields());
+            sb.Append("; ");
+            return sb.ToString();
+        }
+
+        public string Fields()
+        {
+            return "\n(" + Book + ", " + Chapter + ", " + Verse + ", " + Footnote + ", '" + Text + "')";
+        }
+
+ class parts

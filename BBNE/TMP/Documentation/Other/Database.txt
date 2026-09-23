@@ -1,0 +1,7 @@
+﻿TODO
+
+    Az adatbázisok szinkronizálása.
+
+    - BBE psalm fejlécek kiemelése
+    - HUK zsoltárok fejléc kiemelése
+    - NIV üres sorok hozzáadása az újszövetségben

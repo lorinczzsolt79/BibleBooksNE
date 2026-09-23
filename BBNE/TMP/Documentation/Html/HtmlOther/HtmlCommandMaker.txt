@@ -1,0 +1,35 @@
+
+/*************** Html ******************/
+
+BibleInfos class parts
+
+        public string InHtmlTag()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(new HtmlTag().HtmlEntity(HtmlTag.DoubleTag.h3, "BibleInfo"));
+            sb.Append(Paragraph("Number", Number.ToString()));
+            sb.Append(Paragraph("Long Bible Name", LongBibleName));
+            sb.Append(Paragraph("Short Bible Name", ShortBibleName));
+            sb.Append(Paragraph("Other Bible Name", OtherBibleName));
+            sb.Append(Paragraph("Language", Language));
+            sb.Append(Paragraph("Description", Description));
+            sb.Append(Paragraph("Url", Url));
+            sb.Append(Paragraph("Version", Version));
+            sb.Append(Paragraph("My Version", MyVersion));
+            return new HtmlTag().HtmlEntity(HtmlTag.DoubleTag.div, sb.ToString());
+        }
+
+        private string Paragraph(string title, string text)
+        {
+            return new HtmlTag().HtmlEntity(HtmlTag.DoubleTag.p, title + ":\t" + text);
+        }
+
+ FootnoteItem class parts
+
+
+        public string HtmlTagIdFormat()
+        {
+            return Ids.Formatted() + Footnote.ToString_Formatted();
+        }
+
+ class parts

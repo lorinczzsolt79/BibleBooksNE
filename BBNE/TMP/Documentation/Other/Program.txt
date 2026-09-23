@@ -1,0 +1,21 @@
+
+START
+	* Kezdeti beállítások
+	* Adatbázisok
+		- adatbázisok keresése
+			ha van(nak)
+				- adatbázis információk beolvasása
+	* Kezelõfelület beállítások
+
+		Nincs Biblia
+			- Üres felület beállításai, üzenetei.
+		Van(nak) Biblia('k)
+			- Bibliák megjelenítése
+			- Elsõ biblia könyveinek megjelenítése
+
+Választás
+
+	- Amikor a biblia, a könyv, fejezet, vagy vers változik
+		akkor a megjelenített oldal is megváltozik.
+
+
