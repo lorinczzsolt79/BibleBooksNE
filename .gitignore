@@ -430,4 +430,4 @@ FodyWeavers.xsd
 
 # My Temporary files
 
-.BBNE/TMP/
+BBNE/TMP/
