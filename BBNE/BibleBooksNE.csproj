@@ -65,6 +65,8 @@
 	  <None Include="..\README.hu.md" CopyToPublishDirectory="Always" Link="README.hu.md" />
 	  <None Include="..\LICENSE" CopyToPublishDirectory="Always" Link="LICENSE" />
 	  <None Include="..\NOTICE" CopyToPublishDirectory="Always" Link="NOTICE" />
+	  <None Include="..\Setup.md" CopyToPublishDirectory="Always" Link="Setup" />
+	  <None Include="..\Setup.hu.md" CopyToPublishDirectory="Always" Link="Setup.hu" />
 	</ItemGroup>
 
 
