@@ -38,6 +38,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Databases\Bible in Basic English BBNE - BBE.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Databases\Hungarian Karoli Bible BBNE - HUK.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Help\HelpFileForBBNE_EN.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
